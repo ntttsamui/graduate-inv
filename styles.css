@@ -1,0 +1,194 @@
+:root {
+  color-scheme: dark;
+  --red: #870002;
+  --orange: #f15a3a;
+  --cream: #fffaf4;
+  --canvas-w: 595;
+  --canvas-h: 842;
+}
+
+* { box-sizing: border-box; }
+
+html, body { min-width: 320px; min-height: 100%; margin: 0; }
+
+body {
+  display: grid;
+  min-height: 100vh;
+  min-height: 100svh;
+  place-items: center;
+  overflow: hidden;
+  background: #171515;
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+button, a { -webkit-tap-highlight-color: transparent; }
+
+.presentation { display: grid; place-items: center; width: 100%; height: 100%; }
+
+.stage {
+  position: relative;
+  isolation: isolate;
+  width: min(102vw, calc(100svh * 595 / 842));
+  max-height: 100svh;
+  aspect-ratio: 595 / 842;
+  overflow: hidden;
+  border: 0;
+  border-radius: 0;
+  background: #65080e;
+  box-shadow: none;
+  container-type: inline-size;
+}
+
+.tile-backdrop {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: url('assets/background.png') center / 100% 100% no-repeat;
+}
+
+.screen {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(3%);
+  transition: opacity 260ms ease, transform 320ms cubic-bezier(.2,.7,.2,1);
+}
+
+.screen.is-active { z-index: 1; opacity: 1; pointer-events: auto; transform: translateX(0); }
+.screen.is-before { transform: translateX(-3%); }
+
+.cover-title {
+  position: absolute;
+  z-index: 2;
+  top: 4.75%;
+  left: 4.7%;
+  width: 92.1%;
+  margin: 0;
+}
+
+.cover-title img { display: block; width: 100%; height: auto; }
+
+.graduate-art {
+  position: absolute;
+  z-index: 1;
+  top: 16.15%;
+  left: -7.9%;
+  width: 115.8%;
+  height: 85.04%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.cover-date, .cover-location {
+  position: absolute;
+  z-index: 2;
+  display: grid;
+}
+
+.cover-date { top: 29.81%; left: 6.555%; gap: 10px; }
+.cover-location { top: 55.70%; left: 72.4%; gap: 9px; }
+.cover-time { display: block; width: 18.82cqw; height: auto; }
+.cover-date-text { display: block; width: 12.94cqw; height: auto; }
+.cover-school { display: block; width: 23.19cqw; height: auto; margin-left: 6px; }
+.cover-address { display: block; width: 23.87cqw; height: auto; }
+
+.cover-name {
+  display: block;
+  position: absolute;
+  z-index: 3;
+  top: 73.87%;
+  left: 29.24%;
+  width: 39%;
+  height: auto;
+}
+
+
+.round-button {
+  display: grid;
+  width: 10.92cqw;
+  aspect-ratio: 1;
+  padding: 0;
+  place-items: center;
+  border: 1px solid #ffffff86;
+  border-radius: 50%;
+  background: #5f5c5da8;
+  color: #fff;
+  cursor: pointer;
+  transition: background 160ms ease, transform 160ms ease;
+  backdrop-filter: blur(3px);
+}
+
+.round-button:hover { background: #726b6be0; transform: scale(1.06); }
+.round-button:focus-visible { outline: 2px solid #fff; outline-offset: 4px; }
+.round-button svg { width: 45%; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2.4; }
+.cover-next { position: absolute; z-index: 4; bottom: 3.8%; left: 50%; transform: translateX(-50%); }
+.cover-next:hover { transform: translateX(-50%) scale(1.06); }
+
+.page-title {
+  position: absolute;
+  z-index: 2;
+  top: 15.56%;
+  left: 34%;
+  width: 27.4%;
+  margin: 0;
+  color: #fff8ee;
+  font-family: 'Bodoni', 'Bodoni Moda', 'Bodoni MT', Didot, Georgia, 'Times New Roman', serif;
+  font-size: 10.57cqw;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  text-shadow: 3.273px 2.618px 2.618px rgba(255, 128, 0, .25), 3.273px 2.618px 2.618px rgba(255, 128, 0, .25);
+  white-space: nowrap;
+}
+
+.paper {
+  position: absolute;
+  left: 6.22%;
+  width: 85.55%;
+  background: #fff;
+  color: var(--orange);
+}
+
+.map-paper { top: 25.3%; height: 59.0%; }
+.campus-map { position: absolute; top: 14.49%; left: 7.07%; width: 84.28%; height: 43.06%; object-fit: cover; object-position: center 50%; }
+
+.gate-labels {
+  position: absolute;
+  top: 60.36%;
+  right: 4.72%;
+  left: 6.09%;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #f15736;
+  color: #f15736;
+  font-family: 'Bodoni', 'Bodoni Moda', 'Bodoni MT', Didot, Georgia, 'Times New Roman', serif;
+  font-weight: 700;
+  font-size: 2.68cqw;
+}
+
+.gate-labels span { padding-bottom: 1.2%; white-space: nowrap; }
+.parking-note { position: absolute; top: 68.8%; left: 6.09%; display: grid; gap: 1.2cqw; color: #f15736; font-family: 'Bodoni', 'Bodoni Moda', 'Bodoni MT', Didot, Georgia, 'Times New Roman', serif; font-size: 2.01cqw; font-weight: 700; }
+.parking-note > span:not(.up-arrow) { white-space: nowrap; }
+.up-arrow { margin-left: -1px; font-family: Arial, sans-serif; font-size: 8cqw; font-weight: 200; line-height: .8; }
+.paper-footnote { position: absolute; right: 0; bottom: 2.2%; left: 0; margin: 0; color: #252020; font-family: 'Bodoni Moda', 'Bodoni', 'Bodoni MT', Didot, Georgia, 'Times New Roman', serif; font-size: 1.59cqw; font-style: italic; text-align: center; }
+.pager { position: absolute; z-index: 3; right: 0; bottom: 2.5%; left: 0; display: flex; justify-content: center; gap: 2.8cqw; }
+
+.contact-title { top: 16.15%; left: 6.72%; width: 83.7%; font-size: 10.57cqw; }
+.contact-paper { top: 25.3%; height: 59.0%; display: block; }
+.phone-number { position: absolute; left: 28.68%; color: #f15736; font-family: 'Bodoni', 'Bodoni Moda', 'Bodoni MT', Didot, Georgia, 'Times New Roman', serif; font-size: 5.93cqw; font-weight: 700; line-height: 1; text-decoration: none; }
+.phone-number:nth-of-type(1) { top: 8.85%; }
+.phone-number:nth-of-type(2) { top: 19.27%; }
+.phone-number:hover { text-decoration: underline; text-underline-offset: .12em; }
+.contact-note { position: absolute; top: 39.24%; left: 9.23%; width: 80.55%; margin: 0; color: #f15736; font-family: 'Bodoni', 'Bodoni Moda', 'Bodoni MT', Didot, Georgia, 'Times New Roman', serif; font-size: 2.01cqw; font-weight: 700; white-space: nowrap; }
+.contact-pager { bottom: 2.5%; }
+.screen-status { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; }
+
+@media (max-width: 520px) {
+  .stage { width: min(102vw, calc(100svh * 595 / 842)); max-height: 100svh; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+}
