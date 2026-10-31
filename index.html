@@ -12,18 +12,28 @@
       <div class="stage" id="stage" data-screen="0">
         <section class="screen screen-cover is-active" aria-label="Thiệp tốt nghiệp" aria-hidden="false">
           <img class="screen-art" src="assets/cover.png" alt="Thiệp mời lễ tốt nghiệp Thu Trang" />
-          <button class="hotspot cover-next" data-go="1" aria-label="Mở sơ đồ"></button>
+          <button class="nav-button cover-next" data-go="1" aria-label="Mở sơ đồ">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 12h14m-6-6 6 6-6 6" /></svg>
+          </button>
         </section>
 
         <section class="screen screen-map" aria-label="Sơ đồ đường vào" aria-hidden="true">
           <img class="screen-art" src="assets/map.png" alt="Sơ đồ đường vào FPT University HCM, tầng G" />
-          <button class="hotspot map-prev" data-go="0" aria-label="Quay lại thiệp mời"></button>
-          <button class="hotspot map-next" data-go="2" aria-label="Xem thông tin liên hệ"></button>
+          <nav class="pager map-pager" aria-label="Điều hướng thiệp">
+            <button class="nav-button" data-go="0" aria-label="Quay lại thiệp mời">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.5 12h-14m6 6-6-6 6-6" /></svg>
+            </button>
+            <button class="nav-button" data-go="2" aria-label="Xem thông tin liên hệ">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 12h14m-6-6 6 6-6 6" /></svg>
+            </button>
+          </nav>
         </section>
 
         <section class="screen screen-contact" aria-label="Thông tin liên hệ" aria-hidden="true">
           <img class="screen-art" src="assets/contact.png" alt="Thông tin liên hệ và thời gian làm lễ của Thu Trang" />
-          <button class="hotspot contact-prev" data-go="1" aria-label="Quay lại sơ đồ"></button>
+          <button class="nav-button contact-prev" data-go="1" aria-label="Quay lại sơ đồ">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.5 12h-14m6 6-6-6 6-6" /></svg>
+          </button>
         </section>
 
         <div class="screen-status" aria-live="polite" aria-atomic="true">Màn hình 1 trên 3</div>
