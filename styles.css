@@ -10,72 +10,16 @@
 * { box-sizing: border-box; }
 
 @font-face {
-  font-family: 'Bodoni';
-  src: url('assets/fonts/Bodoni-Bold.otf') format('opentype');
+  font-family: 'UTM Bauer Bodoni';
+  src: url('assets/fonts/UTM-Bauer-Bodoni.ttf') format('truetype');
   font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Bodoni Moda';
-  src: url('assets/fonts/BodoniModa-VariableFont_opsz,wght.ttf') format('truetype');
-  font-style: normal;
-  font-weight: 400 900;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Bodoni Moda 48';
-  src: url('assets/fonts/BodoniModa_48pt-Bold.ttf') format('truetype');
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Bodoni Moda 28';
-  src: url('assets/fonts/BodoniModa_28pt-Bold.ttf') format('truetype');
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Bodoni Moda 18';
-  src: url('assets/fonts/BodoniModa_18pt-Bold.ttf') format('truetype');
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Bodoni Moda 9';
-  src: url('assets/fonts/BodoniModa_9pt-Bold.ttf') format('truetype');
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Bodoni Moda 9';
-  src: url('assets/fonts/BodoniModa_9pt-Italic.ttf') format('truetype');
-  font-style: italic;
   font-weight: 400;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Bodoni Moda';
-  src: url('assets/fonts/BodoniModa-Italic-VariableFont_opsz,wght.ttf') format('truetype');
-  font-style: italic;
-  font-weight: 400 900;
   font-display: swap;
 }
 
 html, body { min-width: 320px; min-height: 100%; margin: 0; }
 
-:root { font-optical-sizing: auto; }
+:root { font-synthesis: weight style; }
 
 body {
   display: grid;
@@ -200,7 +144,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   width: 27.4%;
   margin: 0;
   color: #fff8ee;
-  font-family: 'Bodoni', 'Bodoni Moda 48', 'Bodoni Moda', Georgia, 'Times New Roman', serif;
+  font-family: 'UTM Bauer Bodoni', Georgia, 'Times New Roman', serif;
   font-size: 10.57cqw;
   font-weight: 700;
   line-height: 1;
@@ -229,25 +173,25 @@ button, a { -webkit-tap-highlight-color: transparent; }
   justify-content: space-between;
   border-bottom: 1px solid #f15736;
   color: #f15736;
-  font-family: 'Bodoni', 'Bodoni Moda 18', 'Bodoni Moda', Georgia, 'Times New Roman', serif;
+  font-family: 'UTM Bauer Bodoni', Georgia, 'Times New Roman', serif;
   font-weight: 700;
   font-size: 2.68cqw;
 }
 
 .gate-labels span { padding-bottom: 1.2%; white-space: nowrap; }
-.parking-note { position: absolute; top: 68.8%; left: 6.09%; display: grid; gap: 1.2cqw; color: #f15736; font-family: 'Bodoni', 'Bodoni Moda 9', 'Bodoni Moda', Georgia, 'Times New Roman', serif; font-size: 2.01cqw; font-weight: 700; }
+.parking-note { position: absolute; top: 68.8%; left: 6.09%; display: grid; gap: 1.2cqw; color: #f15736; font-family: 'UTM Bauer Bodoni', Georgia, 'Times New Roman', serif; font-size: 2.01cqw; font-weight: 700; }
 .parking-note > span:not(.up-arrow) { white-space: nowrap; }
 .up-arrow { margin-left: -1px; font-family: Arial, sans-serif; font-size: 8cqw; font-weight: 200; line-height: .8; }
-.paper-footnote { position: absolute; right: 0; bottom: 2.2%; left: 0; margin: 0; color: #252020; font-family: 'Bodoni Moda 9', 'Bodoni Moda', Georgia, 'Times New Roman', serif; font-size: 1.59cqw; font-style: italic; text-align: center; }
+.paper-footnote { position: absolute; right: 0; bottom: 2.2%; left: 0; margin: 0; color: #252020; font-family: 'UTM Bauer Bodoni', Georgia, 'Times New Roman', serif; font-size: 1.59cqw; font-style: italic; text-align: center; }
 .pager { position: absolute; z-index: 3; right: 0; bottom: 2.5%; left: 0; display: flex; justify-content: center; gap: 2.8cqw; }
 
 .contact-title { top: 16.15%; left: 6.72%; width: 83.7%; font-size: 10.57cqw; }
 .contact-paper { top: 25.3%; height: 59.0%; display: block; }
-.phone-number { position: absolute; left: 28.68%; color: #f15736; font-family: 'Bodoni', 'Bodoni Moda 28', 'Bodoni Moda', Georgia, 'Times New Roman', serif; font-size: 5.93cqw; font-weight: 700; line-height: 1; text-decoration: none; }
+.phone-number { position: absolute; left: 28.68%; color: #f15736; font-family: 'UTM Bauer Bodoni', Georgia, 'Times New Roman', serif; font-size: 5.93cqw; font-weight: 700; line-height: 1; text-decoration: none; }
 .phone-number:nth-of-type(1) { top: 8.85%; }
 .phone-number:nth-of-type(2) { top: 19.27%; }
 .phone-number:hover { text-decoration: underline; text-underline-offset: .12em; }
-.contact-note { position: absolute; top: 39.24%; left: 9.23%; width: 80.55%; margin: 0; color: #f15736; font-family: 'Bodoni', 'Bodoni Moda 9', 'Bodoni Moda', Georgia, 'Times New Roman', serif; font-size: 2.01cqw; font-weight: 700; white-space: nowrap; }
+.contact-note { position: absolute; top: 39.24%; left: 9.23%; width: 80.55%; margin: 0; color: #f15736; font-family: 'UTM Bauer Bodoni', Georgia, 'Times New Roman', serif; font-size: 2.01cqw; font-weight: 700; white-space: nowrap; }
 .contact-pager { bottom: 2.5%; }
 .screen-status { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; }
 
