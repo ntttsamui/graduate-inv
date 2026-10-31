@@ -8,63 +8,22 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main class="presentation" aria-label="Thiệp mời lễ tốt nghiệp">
+    <main class="presentation" aria-label="Thiệp mời lễ tốt nghiệp Thu Trang">
       <div class="stage" id="stage" data-screen="0">
-        <div class="tile-backdrop" aria-hidden="true"></div>
-
         <section class="screen screen-cover is-active" aria-label="Thiệp tốt nghiệp" aria-hidden="false">
-          <h1 class="cover-title"><img src="assets/cover-title.svg" alt="Graduate" /></h1>
-          <div class="cover-date">
-            <img class="cover-time" src="assets/cover-time.svg" alt="9:00–13h00" />
-            <img class="cover-date-text" src="assets/cover-date.svg" alt="08.11.2026" />
-          </div>
-          <div class="cover-location">
-            <img class="cover-school" src="assets/cover-school.svg" alt="FPT University HCM" />
-            <img class="cover-address" src="assets/cover-location.svg" alt="D1, Khu CNC, Thủ Đức" />
-          </div>
-          <img class="graduate-art" src="assets/event-background.png" alt="Minh họa Thu Trang trong lễ phục tốt nghiệp" />
-          <img class="cover-name" src="assets/cover-name.svg" alt="Thu Trang" />
-          <button class="round-button cover-next" data-go="1" aria-label="Mở sơ đồ">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" /></svg>
-          </button>
+          <img class="screen-art" src="assets/cover.png" alt="Thiệp mời lễ tốt nghiệp Thu Trang" />
+          <button class="hotspot cover-next" data-go="1" aria-label="Mở sơ đồ"></button>
         </section>
 
         <section class="screen screen-map" aria-label="Sơ đồ đường vào" aria-hidden="true">
-          <h2 class="page-title map-title">Sơ đồ</h2>
-          <div class="paper map-paper">
-            <img class="campus-map" src="assets/campus-map.png" alt="Sơ đồ tầng G của FPT University HCM" />
-            <div class="gate-labels" aria-label="Các cổng vào">
-              <span>Cổng 1</span><span>Cổng 2</span><span>Cổng 3</span>
-            </div>
-            <div class="parking-note">
-              <span class="up-arrow" aria-hidden="true">↑</span>
-              <span>Lối vào bãi gửi xe nhó</span>
-              <span>Phí gửi xe là 4k (không nhận chuyển khoản)</span>
-            </div>
-            <p class="paper-footnote">*chụp màn hình lại phòng khi cần nhé</p>
-          </div>
-          <nav class="pager map-pager" aria-label="Điều hướng thiệp">
-            <button class="round-button" data-go="0" aria-label="Quay lại thiệp mời">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5m7 7-7-7 7-7" /></svg>
-            </button>
-            <button class="round-button" data-go="2" aria-label="Xem thông tin liên hệ">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-7-7 7 7-7 7" /></svg>
-            </button>
-          </nav>
+          <img class="screen-art" src="assets/map.png" alt="Sơ đồ đường vào FPT University HCM, tầng G" />
+          <button class="hotspot map-prev" data-go="0" aria-label="Quay lại thiệp mời"></button>
+          <button class="hotspot map-next" data-go="2" aria-label="Xem thông tin liên hệ"></button>
         </section>
 
         <section class="screen screen-contact" aria-label="Thông tin liên hệ" aria-hidden="true">
-          <h2 class="page-title contact-title">Thông tin liên hệ</h2>
-          <div class="paper contact-paper">
-            <a class="phone-number" href="tel:0976866313">0976866313</a>
-            <a class="phone-number" href="tel:0909933406">0909933406</a>
-            <p class="contact-note">Note: Thu Trang làm lễ lúc 14h30 - 16h00 và ở trường từ 9h00-16h00 nhé</p>
-          </div>
-          <nav class="pager contact-pager" aria-label="Điều hướng thiệp">
-            <button class="round-button" data-go="1" aria-label="Quay lại sơ đồ">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5m7 7-7-7 7-7" /></svg>
-            </button>
-          </nav>
+          <img class="screen-art" src="assets/contact.png" alt="Thông tin liên hệ và thời gian làm lễ của Thu Trang" />
+          <button class="hotspot contact-prev" data-go="1" aria-label="Quay lại sơ đồ"></button>
         </section>
 
         <div class="screen-status" aria-live="polite" aria-atomic="true">Màn hình 1 trên 3</div>
