@@ -38,12 +38,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
   overflow: hidden;
   opacity: 0;
   pointer-events: none;
-  transform: translateX(3%);
-  transition: opacity 260ms ease, transform 320ms cubic-bezier(.2,.7,.2,1);
 }
 
-.screen.is-active { z-index: 1; opacity: 1; pointer-events: auto; transform: translateX(0); }
-.screen.is-before { transform: translateX(-3%); }
+.screen.is-active { z-index: 1; opacity: 1; pointer-events: auto; }
 
 .screen-art {
   position: absolute;
@@ -67,20 +64,18 @@ button, a { -webkit-tap-highlight-color: transparent; }
   border-radius: 50%;
   background: transparent;
   cursor: pointer;
-  transition: transform 150ms ease, background-color 150ms ease, box-shadow 150ms ease;
   touch-action: manipulation;
 }
 
-.hotspot:hover { background: #ffffff12; }
-.hotspot:active { transform: scale(.9); background: #ffffff38; box-shadow: inset 0 0 0 2px #ffffff70, 0 0 18px #fff7; }
+.hotspot:active { background: #ffffff38; box-shadow: inset 0 0 0 2px #ffffff70; }
 .hotspot:focus-visible { outline: 2px solid #fff; outline-offset: 3px; background: #ffffff20; }
 
 /* Hit areas follow the button centers in the 595 × 842 exported artwork.
    Percent positioning keeps them aligned as the portrait scales responsively. */
-.cover-next { left: 42.85%; bottom: 3.8%; }
+.cover-next { left: 43%; bottom: 3.8%; }
 .map-prev { left: 37.84%; bottom: 1.8%; }
-.map-next { left: 51.28%; bottom: 1.8%; }
-.contact-prev { left: 44.04%; bottom: 1.8%; }
+.map-next { left: 51.43%; bottom: 1.8%; }
+.contact-prev { left: 43.94%; bottom: 1.8%; }
 
 .screen-status {
   position: absolute;
@@ -97,5 +92,5 @@ button, a { -webkit-tap-highlight-color: transparent; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+  *, *::before, *::after { scroll-behavior: auto !important; }
 }
